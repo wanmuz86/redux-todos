@@ -5,7 +5,10 @@ import todoReducer from '../features/todoSlice'
 
 export const store = configureStore({
     // List down the reducers within this store , you might have multiple reducers
-    reducer:todoReducer
+    // state.todos.todos [the second todos coming from here]
+    reducer:{
+        todos:todoReducer
+    }
 
     // You can also define other component eg, middleware in this store
 })
