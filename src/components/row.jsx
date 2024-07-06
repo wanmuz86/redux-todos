@@ -7,6 +7,7 @@ const Row = ({todo}) => {
   return (
     <div>
         <h3>{todo.text}</h3>
+  
         <button onClick={()=> dispatch(removeTodo({id:todo.id}))}>Remove</button>
     </div>
   )

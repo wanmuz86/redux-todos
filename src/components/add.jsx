@@ -9,6 +9,7 @@ const Add = () => {
     const addTodoPressed = () => {
       // Call addTodo action using dispatch method from useDispatch
       dispatch(addTodo({id:Date.now(), text}))
+      setText('')
 
     }
   return (
