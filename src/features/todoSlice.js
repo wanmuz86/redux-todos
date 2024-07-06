@@ -23,8 +23,9 @@ const todoSlice = createSlice({
         removeTodo: (state, action) => {
             state.todos = state.todos.filter(val=> val.id !== action.payload)
         }
-
-        
+    
     }
 
 })
+export const {addTodo, removeTodo} = todoSlice.actions
+export default todoSlice.reducer;
