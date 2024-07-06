@@ -1,8 +1,14 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { addTodo } from '../features/todoSlice'
 
 const Add = () => {
     const [text, setText] = useState('')
-    const addTodo = () => {
+    const dispatch = useDispatch()
+    
+    const addTodoPressed = () => {
+      // Call addTodo action using dispatch method from useDispatch
+      dispatch(addTodo({id:Date.now(), text}))
 
     }
   return (
@@ -11,7 +17,7 @@ const Add = () => {
         <div>
             <input type="text" value={text} 
             onChange={(e)=>setText(e.target.value)}/>
-            <button onClick={addTodo}>Add To Do</button>
+            <button onClick={addTodoPressed}>Add To Do</button>
         </div>
     </div>
   )
